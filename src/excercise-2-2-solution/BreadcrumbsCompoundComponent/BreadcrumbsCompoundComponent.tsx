@@ -16,7 +16,7 @@ interface BreadcrumbsComponent extends React.FC<BreadcrumbsProps> {
 const Breadcrumbs: BreadcrumbsComponent = ({ children }) => {
   const totalChildren = React.Children.count(children);
   return (
-    <nav aria-label="breadcrumb">
+    <nav>
       <ol>
         {React.Children.map(children, (child, index) => {
           if (

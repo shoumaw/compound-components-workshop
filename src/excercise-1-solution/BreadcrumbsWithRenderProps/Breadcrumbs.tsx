@@ -1,6 +1,6 @@
 const Breadcrumbs = ({ renderItems }: { renderItems: () => JSX.Element[] }) => {
   return (
-    <nav aria-label="breadcrumb">
+    <nav>
       <ol>{renderItems()}</ol>
     </nav>
   );

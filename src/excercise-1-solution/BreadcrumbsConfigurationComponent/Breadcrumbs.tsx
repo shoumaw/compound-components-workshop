@@ -4,7 +4,7 @@ const Breadcrumbs = ({
   items: { href?: string; text: string }[];
 }) => {
   return (
-    <nav aria-label="breadcrumb">
+    <nav>
       <ol>
         {items.map((item, index) => (
           <li key={index}>

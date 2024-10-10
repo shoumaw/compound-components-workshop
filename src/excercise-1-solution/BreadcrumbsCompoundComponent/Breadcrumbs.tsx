@@ -15,7 +15,7 @@ interface BreadcrumbsComponent extends React.FC<BreadcrumbsProps> {
 }
 const Breadcrumbs: BreadcrumbsComponent = ({ children }) => {
   return (
-    <nav aria-label="breadcrumb">
+    <nav>
       <ol>{children}</ol>
     </nav>
   );
