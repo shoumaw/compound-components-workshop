@@ -1,0 +1,40 @@
+{
+  "name": "compound-components-workshop",
+  "version": "1.0.0",
+  "description": "A workshop to learn about compound components in React",
+  "keywords": [
+    "typescript",
+    "react",
+    "starter"
+  ],
+  "main": "src/index.tsx",
+  "dependencies": {
+    "loader-utils": "3.2.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.38",
+    "@types/react-dom": "18.2.15",
+    "cross-env": "^7.0.3",
+    "typescript": "4.4.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:example1CompoundComponent": "cross-env REACT_APP_EXAMPLE=example1CompoundComponent react-scripts start",
+    "start:example1ConfigurationComponent": "cross-env REACT_APP_EXAMPLE=example1ConfigurationComponent react-scripts start",
+    "start:example1RenderProps": "cross-env REACT_APP_EXAMPLE=example1RenderProps react-scripts start",
+    "start:example2UncontrolledCompoundComponent": "cross-env REACT_APP_EXAMPLE=example2UncontrolledCompoundComponent react-scripts start",
+    "start:example2ControlledCompoundComponent": "cross-env REACT_APP_EXAMPLE=example2ControlledCompoundComponent react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
