@@ -12,21 +12,16 @@
     "loader-utils": "3.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1"
   },
   "devDependencies": {
     "@types/react": "18.2.38",
     "@types/react-dom": "18.2.15",
-    "cross-env": "^7.0.3",
     "typescript": "4.4.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "start:example1CompoundComponent": "cross-env REACT_APP_EXAMPLE=example1CompoundComponent react-scripts start",
-    "start:example1ConfigurationComponent": "cross-env REACT_APP_EXAMPLE=example1ConfigurationComponent react-scripts start",
-    "start:example1RenderProps": "cross-env REACT_APP_EXAMPLE=example1RenderProps react-scripts start",
-    "start:example2UncontrolledCompoundComponent": "cross-env REACT_APP_EXAMPLE=example2UncontrolledCompoundComponent react-scripts start",
-    "start:example2ControlledCompoundComponent": "cross-env REACT_APP_EXAMPLE=example2ControlledCompoundComponent react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
