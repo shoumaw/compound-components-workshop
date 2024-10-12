@@ -22,7 +22,7 @@ export const Tabs: FC<TabsProps> = ({
 
   const onTabChange = (newTab: string) => {
     onChange?.(newTab);
-    onTabChange?.(newTab);
+    onTabChangeProp?.(newTab);
   };
 
   return (

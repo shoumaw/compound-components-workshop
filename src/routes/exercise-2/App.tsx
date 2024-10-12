@@ -3,6 +3,7 @@ import React from "react";
 const App: React.FC = () => {
   return (
     <div>
+      <h1>Accordion Compound Component</h1>
       {/*
         TODO:
         - Use the Accordion component to create multiple accordion items

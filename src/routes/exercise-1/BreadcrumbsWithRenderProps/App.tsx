@@ -6,6 +6,7 @@ const App: React.FC = () => {
 
   return (
     <div>
+      <h1>Breadcrumbs Render Props Component</h1>
       {/*
         TODO:
         - Use the Breadcrumbs component

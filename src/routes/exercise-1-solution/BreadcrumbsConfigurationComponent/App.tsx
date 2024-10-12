@@ -7,7 +7,12 @@ const App = () => {
     { text: "Data" },
   ];
 
-  return <Breadcrumbs items={breadcrumbItems} />;
+  return (
+    <>
+      <h1>Breadcrumbs Configuration Component</h1>
+      <Breadcrumbs items={breadcrumbItems} />
+    </>
+  );
 };
 
 export default App;

@@ -9,14 +9,17 @@ const App = () => {
   ];
 
   return (
-    <Breadcrumbs
-      items={breadcrumbItems}
-      renderItem={(item, isLast) => (
-        <BreadcrumbItem isLast={isLast} href={item.href}>
-          {item.text}
-        </BreadcrumbItem>
-      )}
-    />
+    <>
+      <h1>Breadcrumbs Render Props Component</h1>
+      <Breadcrumbs
+        items={breadcrumbItems}
+        renderItem={(item, isLast) => (
+          <BreadcrumbItem isLast={isLast} href={item.href}>
+            {item.text}
+          </BreadcrumbItem>
+        )}
+      />
+    </>
   );
 };
 

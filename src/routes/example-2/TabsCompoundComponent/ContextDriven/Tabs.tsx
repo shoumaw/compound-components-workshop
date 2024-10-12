@@ -8,12 +8,19 @@ interface TabsProps {
   onTabChange?: (newTab: string) => string;
 }
 
-export const Tabs: FC<TabsProps> = ({ children, activeTab: activeTabProp, onTabChange: onTabChangeProp }) => {
-  const [activeTab, onChange] = useControlled({ value: activeTabProp, initialValue: "" });
+export const Tabs: FC<TabsProps> = ({
+  children,
+  activeTab: activeTabProp,
+  onTabChange: onTabChangeProp,
+}) => {
+  const [activeTab, onChange] = useControlled({
+    value: activeTabProp,
+    initialValue: "",
+  });
 
   const onTabChange = (newTab: string) => {
     onChange?.(newTab);
-    onTabChange?.(newTab);
+    onTabChangeProp?.(newTab);
   };
 
   return (
@@ -27,18 +34,27 @@ export const TabsList: FC<{ children: ReactNode }> = ({ children }) => {
   return <div>{children}</div>;
 };
 
-export const Tab: FC<{ children: ReactNode; value: string }> = ({ children, value }) => {
+export const Tab: FC<{ children: ReactNode; value: string }> = ({
+  children,
+  value,
+}) => {
   const { activeTab, onTabChange } = useTabs();
   const isActive = activeTab === value;
 
   return (
-    <button style={{ background: isActive ? "lavender" : "transparent" }} onClick={() => onTabChange(value)}>
+    <button
+      style={{ background: isActive ? "lavender" : "transparent" }}
+      onClick={() => onTabChange(value)}
+    >
       {children}
     </button>
   );
 };
 
-export const TabPanel: FC<{ children: ReactNode; value: string }> = ({ children, value }) => {
+export const TabPanel: FC<{ children: ReactNode; value: string }> = ({
+  children,
+  value,
+}) => {
   const { activeTab } = useTabs();
 
   if (activeTab !== value) {

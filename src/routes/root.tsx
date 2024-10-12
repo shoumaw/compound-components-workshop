@@ -26,13 +26,13 @@ export default function Root() {
               </Link>
             </li>
             <li>
-              <Link to={`/example-2-controlled-compound-component`}>
-                Example 2: Controlled Compound Component
+              <Link to={`/example-2-context-compound-component`}>
+                Example 2: Context Driven Compound Component
               </Link>
             </li>
             <li>
-              <Link to={`/example-2-uncontrolled-compound-component`}>
-                Example 2: Uncontrolled Compound Component
+              <Link to={`/example-2-context-and-children-compound-component`}>
+                Example 2: Context And Children Compound Component
               </Link>
             </li>
           </ul>
