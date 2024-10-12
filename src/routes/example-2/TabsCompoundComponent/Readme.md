@@ -26,7 +26,7 @@
 - Pretty verbose
 - Weird to have the content for a tab as a whole spread across the JSX like this
 
-## ContextDriven
+## ContextAndChildren
 
 ```tsx
 <Tabs>
@@ -53,5 +53,5 @@
 ## On Controlling Tabs
 
 - Navigation and Tabs are often closely related
-  - If you prefer programatic Navigation `ContextAndChildren` is easier
-  - If you want to you `Link` `ContextDriven` is easier via an `as` or `component` prop
+  - If you prefer programmatic Navigation `ContextAndChildren` is easier
+  - If you want to use `Link` `ContextDriven` is easier via an `as` or `component` prop

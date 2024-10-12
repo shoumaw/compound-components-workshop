@@ -1,4 +1,4 @@
-import Option from "./Option";
+import Option from "../shared/Option";
 
 const Select = ({
   options,

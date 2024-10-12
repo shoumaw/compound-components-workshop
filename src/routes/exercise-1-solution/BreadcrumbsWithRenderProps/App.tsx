@@ -1,4 +1,4 @@
-import BreadcrumbItem from "./BreadcrumbItem";
+import BreadcrumbItem from "../shared/BreadcrumbItem";
 import Breadcrumbs from "./Breadcrumbs";
 
 const App = () => {

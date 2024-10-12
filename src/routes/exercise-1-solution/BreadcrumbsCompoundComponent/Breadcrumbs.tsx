@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import BreadcrumbItem, { BreadcrumbItemProps } from "./BreadcrumbItem";
+import BreadcrumbItem, { BreadcrumbItemProps } from "../shared/BreadcrumbItem";
 
 interface BreadcrumbsProps {
   children: ReactNode;

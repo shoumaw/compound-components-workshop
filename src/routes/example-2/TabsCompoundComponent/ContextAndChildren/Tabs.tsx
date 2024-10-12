@@ -8,10 +8,17 @@ interface TabsProps {
   onTabChange?: (newTab: string) => string;
 }
 
-export const Tabs: FC<TabsProps> = ({ children, activeTab: activeTabProp, onTabChange: onTabChangeProp }) => {
+export const Tabs: FC<TabsProps> = ({
+  children,
+  activeTab: activeTabProp,
+  onTabChange: onTabChangeProp,
+}) => {
   const tabInfo = getTabInfo(children);
 
-  const [activeTab, onChange] = useControlled({ value: activeTabProp, initialValue: "" });
+  const [activeTab, onChange] = useControlled({
+    value: activeTabProp,
+    initialValue: "",
+  });
 
   const onTabChange = (newTab: string) => {
     onChange?.(newTab);
@@ -26,7 +33,9 @@ export const Tabs: FC<TabsProps> = ({ children, activeTab: activeTabProp, onTabC
   );
 };
 
-const getTabInfo = (children: ReactNode): { value: string; label: ReactNode }[] => {
+const getTabInfo = (
+  children: ReactNode
+): { value: string; label: ReactNode }[] => {
   return (
     Children.toArray(children)
       // We are going to be aggregating props
@@ -65,7 +74,7 @@ interface TabListProps {
   tabInfo: { value: string; label: ReactNode }[];
 }
 
-const TabList: FC<TabListProps> = ({ tabInfo }) => {
+export const TabList: FC<TabListProps> = ({ tabInfo }) => {
   const { activeTab, onTabChange } = useTabs();
 
   return (
@@ -73,7 +82,9 @@ const TabList: FC<TabListProps> = ({ tabInfo }) => {
       {tabInfo.map(({ value, label }) => (
         <button
           key={value}
-          style={{ background: activeTab === value ? "lavender" : "transparent" }}
+          style={{
+            background: activeTab === value ? "lavender" : "transparent",
+          }}
           onClick={() => onTabChange(value)}
         >
           {label}
@@ -89,7 +100,7 @@ interface TabItemProps {
   children: ReactNode;
 }
 
-const TabItem: FC<TabItemProps> = ({ value, children }) => {
+export const TabItem: FC<TabItemProps> = ({ value, children }) => {
   const { activeTab } = useTabs();
 
   if (activeTab !== value) {

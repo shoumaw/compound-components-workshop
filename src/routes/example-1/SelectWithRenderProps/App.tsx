@@ -1,7 +1,7 @@
 import React from "react";
 
 import Select from "./Select";
-import Option from "./Option";
+import Option from "../shared/Option";
 const App: React.FC = () => {
   return (
     <Select

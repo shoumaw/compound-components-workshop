@@ -1,34 +1,33 @@
 import React from "react";
-import Tabs from "./Tabs";
-
-{
-  /* <Tabs>
-  <Tabs.List>
-    <Tabs.Tab onClick={() => setActiveTabIndex(0)}>Tab 1</Tabs.Tab>
-    <Tabs.Tab onClick={() => setActiveTabIndex(1)}>Tab 2</Tabs.Tab>
-  <Tabs.List>
-
-  <Tabs.Content>
-    <Tabs.Panel isVisible={activeTabIndex === 0}>Content for Tab 1</Tabs.Panel>
-    <Tabs.Panel isVisible={activeTabIndex === 1}>Content for Tab 2</Tabs.Panel>
-  </Tabs.Content>
-</Tabs> */
-}
+import { Tabs, TabsList, Tab, TabPanel } from "./ContextDriven/Tabs";
+// import { TabItem, Tabs } from "./ContextAndChildren/Tabs";
 
 const App: React.FC = () => {
   return (
-    <Tabs initialActiveTab={0}>
-      {/* <div>Extra content</div> */}
-      <Tabs.List>
-        <Tabs.Tab>Tab 1</Tabs.Tab>
-        <Tabs.Tab>Tab 2</Tabs.Tab>
-      </Tabs.List>
-
-      <Tabs.Content>
-        <Tabs.Panel>Content for Tab 1</Tabs.Panel>
-        <Tabs.Panel>Content for Tab 2</Tabs.Panel>
-      </Tabs.Content>
+    // ContextDriven
+    <Tabs>
+      <TabsList>
+        <Tab value="tab-1">First Tab</Tab>
+        <Tab value="tab-2">Second Tab</Tab>
+        <Tab value="tab-3">Third Tab</Tab>
+      </TabsList>
+      <TabPanel value="tab-1">Content for the first tab</TabPanel>
+      <TabPanel value="tab-2">Content for the second tab</TabPanel>
+      <TabPanel value="tab-3">Content for the third tab</TabPanel>
     </Tabs>
+
+    // ContextAndChildren
+    // <Tabs>
+    //   <TabItem value="tab-1" label="First Tab">
+    //     Content for the first tab
+    //   </TabItem>
+    //   <TabItem value="tab-2" label="Second Tab">
+    //     Content for the second tab
+    //   </TabItem>
+    //   <TabItem value="tab-3" label="Third Tab">
+    //     Content for the third tab
+    //   </TabItem>
+    // </Tabs>
   );
 };
 

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import Option from "./Option";
+import Option from "../shared/Option";
 
 const Select = ({ children }: { children: ReactNode }) => (
   <select>{children}</select>
