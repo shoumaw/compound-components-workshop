@@ -36,18 +36,20 @@ const Accordion: AccordionComponent = ({
 
   return (
     <AccordionContext.Provider value={contextValue}>
-      {Children.map(children, (child, index) => {
-        if (
-          React.isValidElement<AccordionItemProps>(child) &&
-          child.type === AccordionItem
-        ) {
-          return cloneElement(child as ReactElement, { index });
-        } else {
-          throw new Error(
-            "Accordion component only accepts AccordionItem components as children"
-          );
-        }
-      })}
+      <div className="space-y-2">
+        {Children.map(children, (child, index) => {
+          if (
+            React.isValidElement<AccordionItemProps>(child) &&
+            child.type === AccordionItem
+          ) {
+            return cloneElement(child as ReactElement, { index });
+          } else {
+            throw new Error(
+              "Accordion component only accepts AccordionItem components as children"
+            );
+          }
+        })}
+      </div>
     </AccordionContext.Provider>
   );
 };

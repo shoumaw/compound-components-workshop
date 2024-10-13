@@ -3,7 +3,7 @@ import React from "react";
 import Select from "./Select";
 const App: React.FC = () => {
   return (
-    <>
+    <div className="flex flex-col gap-y-4 font-bold">
       <h1>Select Configuration Component</h1>
       <Select
         options={[
@@ -11,7 +11,7 @@ const App: React.FC = () => {
           { value: "2", label: "Option 2" },
         ]}
       />
-    </>
+    </div>
   );
 };
 

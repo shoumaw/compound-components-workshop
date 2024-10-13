@@ -11,7 +11,7 @@ const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({
   href,
   isLast,
 }) => (
-  <li>
+  <li className="inline-flex items-center">
     {/*
       TODO:
       - If 'href' is provided and this is not the last item, render an <a> tag with 'href' and 'children'

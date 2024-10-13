@@ -8,10 +8,10 @@ const App = () => {
   ];
 
   return (
-    <>
+    <div className="flex flex-col gap-y-4 font-bold">
       <h1>Breadcrumbs Configuration Component</h1>
       <Breadcrumbs items={breadcrumbItems} />
-    </>
+    </div>
   );
 };
 

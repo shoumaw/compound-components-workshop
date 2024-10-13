@@ -1,9 +1,9 @@
 import React from "react";
-import Accordion from "./AccordionCompoundComponent/Accordion";
+import Accordion from "./Accordion";
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-y-4 font-bold">
       <h1>Accordion Compound Component</h1>
       <Accordion>
         <Accordion.Item>

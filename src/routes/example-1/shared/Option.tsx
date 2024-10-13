@@ -1,11 +1,13 @@
-import { ReactNode } from "react";
+import { FC, ReactNode } from "react";
 
-const Option = ({
-  value,
-  children,
-}: {
+export interface OptionProps {
   value: string;
   children: ReactNode;
-}) => <option value={value}>{children}</option>;
+}
+const Option: FC<OptionProps> = ({ value, children }) => (
+  <option className="text-gray-700" value={value}>
+    {children}
+  </option>
+);
 
 export default Option;

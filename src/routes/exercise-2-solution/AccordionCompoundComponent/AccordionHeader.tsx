@@ -15,9 +15,12 @@ const AccordionHeader: FC<AccordionHeaderProps> = ({ children, index }) => {
   };
 
   return (
-    <div onClick={handleClick}>
+    <div
+      onClick={handleClick}
+      className="flex justify-between items-center cursor-pointer bg-gray-100 px-4 py-2 text-lg font-semibold hover:bg-gray-200"
+    >
       {children}
-      <span style={{ float: "right" }}>{isOpen ? "-" : "+"}</span>
+      <span className="text-xl">{isOpen ? "-" : "+"}</span>
     </div>
   );
 };

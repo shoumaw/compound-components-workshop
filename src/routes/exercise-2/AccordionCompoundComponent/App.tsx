@@ -2,7 +2,7 @@ import React from "react";
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-y-4 font-bold">
       <h1>Accordion Compound Component</h1>
       {/*
         TODO:

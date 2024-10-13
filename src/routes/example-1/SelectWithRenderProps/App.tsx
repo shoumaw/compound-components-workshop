@@ -4,7 +4,7 @@ import Select from "./Select";
 import Option from "../shared/Option";
 const App: React.FC = () => {
   return (
-    <>
+    <div className="flex flex-col gap-y-4 font-bold">
       <h1>Select Render Props Component</h1>
       <Select
         options={[
@@ -17,7 +17,7 @@ const App: React.FC = () => {
           </>
         )}
       />
-    </>
+    </div>
   );
 };
 

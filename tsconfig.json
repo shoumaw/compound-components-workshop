@@ -1,7 +1,7 @@
 {
     "include": [
         "./src/**/*"
-    ],
+, "src/routes/exercise-1-solution/BreadcrumbsCompoundComponent/.tsx"    ],
     "compilerOptions": {
         "strict": true,
         "esModuleInterop": true,

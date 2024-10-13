@@ -3,7 +3,7 @@ import { TabItem, Tabs } from "./Tabs";
 
 const App: React.FC = () => {
   return (
-    <>
+    <div className="flex flex-col gap-y-4 font-bold">
       <h1>Context and Children</h1>
       <Tabs>
         <TabItem value="tab-1" label="First Tab">
@@ -16,7 +16,7 @@ const App: React.FC = () => {
           Content for the third tab
         </TabItem>
       </Tabs>
-    </>
+    </div>
   );
 };
 

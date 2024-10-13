@@ -13,7 +13,7 @@ interface AccordionItemComponent extends FC<AccordionItemProps> {
 }
 const AccordionItem: AccordionItemComponent = ({ children, index }) => {
   return (
-    <div>
+    <div className="border border-gray-300 rounded-lg overflow-hidden">
       {Children.map(children, (child) => {
         if (
           React.isValidElement<AccordionHeaderProps | AccordionBodyProps>(

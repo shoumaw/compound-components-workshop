@@ -9,8 +9,8 @@ const Breadcrumbs = ({
   ) => JSX.Element;
 }) => {
   return (
-    <nav>
-      <ol>
+    <nav className="text-sm">
+      <ol className="flex space-x-2">
         {items.map((item, index) =>
           renderItem(item, index === items.length - 1)
         )}

@@ -10,8 +10,8 @@ interface BreadcrumbsProps {
 
 const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, renderItem }) => {
   return (
-    <nav>
-      <ol>
+    <nav className="text-sm">
+      <ol className="flex space-x-2">
         {/*
           TODO:
           - Iterate over the 'items' array using 'map'

@@ -11,8 +11,14 @@ const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({
   href,
   isLast,
 }) => (
-  <li>
-    {href && !isLast ? <a href={href}>{children}</a> : <span>{children}</span>}
+  <li className="inline-flex items-center">
+    {href && !isLast ? (
+      <a href={href} className="text-blue-500 hover:text-blue-700">
+        {children}
+      </a>
+    ) : (
+      <span className="text-gray-500">{children}</span>
+    )}
   </li>
 );
 

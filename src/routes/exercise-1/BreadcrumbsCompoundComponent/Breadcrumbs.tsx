@@ -11,8 +11,8 @@ interface BreadcrumbsComponent extends React.FC<BreadcrumbsProps> {
 
 const Breadcrumbs: BreadcrumbsComponent = ({ children }) => {
   return (
-    <nav aria-label="breadcrumb">
-      <ol>
+    <nav className="text-sm">
+      <ol className="flex space-x-2">
         {/*
           TODO:
           - Render the children within an ordered list.

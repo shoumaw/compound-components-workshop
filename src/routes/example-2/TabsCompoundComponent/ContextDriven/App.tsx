@@ -3,7 +3,7 @@ import { Tabs, TabsList, Tab, TabPanel } from "./Tabs";
 
 const App: React.FC = () => {
   return (
-    <>
+    <div className="flex flex-col gap-y-4 font-bold">
       <h1>Context</h1>
       <Tabs>
         <TabsList>
@@ -15,7 +15,7 @@ const App: React.FC = () => {
         <TabPanel value="tab-2">Content for the second tab</TabPanel>
         <TabPanel value="tab-3">Content for the third tab</TabPanel>
       </Tabs>
-    </>
+    </div>
   );
 };
 

@@ -5,7 +5,7 @@ const App: React.FC = () => {
   // - Define the 'breadcrumbItems' array with objects containing 'text' and optional 'href' properties
 
   return (
-    <div>
+    <div className="flex flex-col gap-y-4 font-bold">
       <h1>Breadcrumbs Render Props Component</h1>
       {/*
         TODO:

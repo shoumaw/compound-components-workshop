@@ -10,8 +10,8 @@ interface BreadcrumbsComponent extends React.FC<BreadcrumbsProps> {
 }
 const Breadcrumbs: BreadcrumbsComponent = ({ children }) => {
   return (
-    <nav>
-      <ol>{children}</ol>
+    <nav className="text-sm">
+      <ol className="flex space-x-2">{children}</ol>
     </nav>
   );
 };

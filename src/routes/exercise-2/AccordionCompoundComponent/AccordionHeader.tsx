@@ -16,16 +16,17 @@ const AccordionHeader: FC<AccordionHeaderProps> = ({ children, index }) => {
   // - If the item is closed, set 'openIndex' to the current index
 
   return (
-    <div onClick={() => {} /* click handler */}>
+    <div
+      className="flex justify-between items-center cursor-pointer bg-gray-100 px-4 py-2 text-lg font-semibold hover:bg-gray-200"
+      onClick={() => {} /* click handler */}
+    >
       {/*
         TODO:
         - Render the header content
         - Display a symbol (e.g., '+' or '-') based on whether the item is open
       */}
       {children}
-      <span style={{ float: "right" }}>
-        {/* '+' or '-' based on open state */}
-      </span>
+      <span className="text-xl">{/* '+' or '-' based on open state */}</span>
     </div>
   );
 };

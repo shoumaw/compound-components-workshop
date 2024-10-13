@@ -2,8 +2,8 @@ const Breadcrumbs: React.FC<{
   items: { href?: string; text: string }[];
 }> = ({ items }) => {
   return (
-    <nav>
-      <ol>
+    <nav className="text-sm">
+      <ol className="flex space-x-2">
         {/*
           TODO: Iterate over the items array and render BreadcrumbItem components
           - Pass necessary props to each BreadcrumbItem

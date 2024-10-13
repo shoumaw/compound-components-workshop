@@ -17,7 +17,7 @@ const AccordionItem: AccordionItemComponent = ({ children, index }) => {
   const { openIndex, setOpenIndex } = useAccordionContext();
 
   return (
-    <div>
+    <div className="border border-gray-300 rounded-lg overflow-hidden">
       {/*
         TODO:
         - Iterate over the children using Children.map

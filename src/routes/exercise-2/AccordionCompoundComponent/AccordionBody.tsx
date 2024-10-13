@@ -16,7 +16,7 @@ const AccordionBody: FC<AccordionBodyProps> = ({ children, index }) => {
   return (
     // TODO:
     // - Conditionally render the body content based on whether the item is open
-    <></>
+    <div className="p-4 bg-white text-gray-700 border-t border-gray-300"></div>
   );
 };
 

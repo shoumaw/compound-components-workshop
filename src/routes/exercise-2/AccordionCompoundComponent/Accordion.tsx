@@ -33,7 +33,7 @@ const Accordion: AccordionComponent = ({
     <AccordionContext.Provider
       value={{ openIndex: 0, setOpenIndex: () => {} } /* context value */}
     >
-      {/* Children.map */}
+      <div className="space-y-2">{/* Children.map */}</div>
     </AccordionContext.Provider>
   );
 };
