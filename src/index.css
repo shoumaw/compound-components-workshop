@@ -27,25 +27,7 @@
     @apply h-full;
   }
 
-  textarea,
-  input,
-  button {
-    @apply text-base font-sans border-none rounded-lg p-2 shadow-md bg-white leading-6 m-0;
-  }
 
-  button {
-    @apply text-blue-500 font-medium;
-  }
-
-  textarea:hover,
-  input:hover,
-  button:hover {
-    @apply shadow-lg;
-  }
-
-  button:active {
-    @apply shadow-md transform translate-y-px;
-  }
 
 
   #root {

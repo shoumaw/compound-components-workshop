@@ -1,19 +1,14 @@
-import React from "react";
-
-const App: React.FC = () => {
-  // TODO:
-  // - Define the 'breadcrumbItems' array with objects containing 'text' and optional 'href' properties
+const App = () => {
+  const breadcrumbItems = [
+    { text: "Home", href: "/" },
+    { text: "Library", href: "/library" },
+    { text: "Data", href: "/library/data" },
+  ];
 
   return (
     <div className="flex flex-col gap-y-4 font-bold">
       <h1>Breadcrumbs Render Props Component</h1>
-      {/*
-        TODO:
-        - Use the Breadcrumbs component
-        - Pass the 'breadcrumbItems' array to the 'items' prop
-        - Provide a 'renderItem' function that renders each BreadcrumbItem
-        - Inside 'renderItem', return a BreadcrumbItem with appropriate props
-      */}
+      {/* <Breadcrumbs> */}
     </div>
   );
 };

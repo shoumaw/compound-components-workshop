@@ -7,11 +7,7 @@ export interface AccordionItemProps {
   children: ReactNode;
   index?: number;
 }
-interface AccordionItemComponent extends FC<AccordionItemProps> {
-  Header: typeof AccordionHeader;
-  Body: typeof AccordionBody;
-}
-const AccordionItem: AccordionItemComponent = ({ children, index }) => {
+const AccordionItem: FC<AccordionItemProps> = ({ children, index }) => {
   return (
     <div className="border border-gray-300 rounded-lg overflow-hidden">
       {Children.map(children, (child) => {
@@ -31,6 +27,4 @@ const AccordionItem: AccordionItemComponent = ({ children, index }) => {
     </div>
   );
 };
-AccordionItem.Header = AccordionHeader;
-AccordionItem.Body = AccordionBody;
 export default AccordionItem;

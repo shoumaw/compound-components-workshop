@@ -8,12 +8,7 @@ export interface AccordionItemProps {
   index?: number;
 }
 
-interface AccordionItemComponent extends FC<AccordionItemProps> {
-  Header: typeof AccordionHeader;
-  Body: typeof AccordionBody;
-}
-
-const AccordionItem: AccordionItemComponent = ({ children, index }) => {
+const AccordionItem: FC<AccordionItemProps> = ({ children, index }) => {
   const { openIndex, setOpenIndex } = useAccordionContext();
 
   return (
@@ -29,9 +24,5 @@ const AccordionItem: AccordionItemComponent = ({ children, index }) => {
     </div>
   );
 };
-
-// Attach Header and Body as subcomponents of AccordionItem
-AccordionItem.Header = AccordionHeader;
-AccordionItem.Body = AccordionBody;
 
 export default AccordionItem;

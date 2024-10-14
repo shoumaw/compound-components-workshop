@@ -1,36 +1,37 @@
-import React, { Children, cloneElement, ReactNode } from "react";
+import React, { Children, cloneElement, FC, ReactNode } from "react";
 
 interface BreadcrumbItemProps {
   children: ReactNode;
   href?: string;
-  isLast?: boolean;
 }
 
-const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({
+export const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({
   children,
   href,
-  isLast,
-}) => (
-  <li className="inline-flex items-center">
-    {href && !isLast ? (
-      <a href={href} className="text-blue-500 hover:text-blue-700">
-        {children}
-      </a>
-    ) : (
-      <span className="text-gray-500">{children}</span>
-    )}
-  </li>
-);
+}) => {
+  const isLink = typeof href !== "undefined";
+  return (
+    <li className="inline-flex items-center">
+      {isLink ? (
+        <a href={href} className="text-blue-500 hover:text-blue-700">
+          {children}
+        </a>
+      ) : (
+        <span className="text-gray-500">{children}</span>
+      )}
+    </li>
+  );
+};
 
 interface BreadcrumbsProps {
   children: ReactNode;
   separator?: string;
 }
 
-interface BreadcrumbsComponent extends React.FC<BreadcrumbsProps> {
-  Item: React.FC<BreadcrumbItemProps>;
-}
-const Breadcrumbs: BreadcrumbsComponent = ({ children, separator = "/" }) => {
+export const Breadcrumbs: FC<BreadcrumbsProps> = ({
+  children,
+  separator = "/",
+}) => {
   const items = Children.toArray(children);
 
   return (
@@ -44,7 +45,7 @@ const Breadcrumbs: BreadcrumbsComponent = ({ children, separator = "/" }) => {
             const isLast = index === items.length - 1;
             return (
               <>
-                {cloneElement(child, { isLast })}
+                {child}
                 {!isLast && (
                   <span className="mx-2 text-gray-400">{separator}</span>
                 )}
@@ -60,7 +61,3 @@ const Breadcrumbs: BreadcrumbsComponent = ({ children, separator = "/" }) => {
     </nav>
   );
 };
-
-Breadcrumbs.Item = BreadcrumbItem;
-
-export default Breadcrumbs;
