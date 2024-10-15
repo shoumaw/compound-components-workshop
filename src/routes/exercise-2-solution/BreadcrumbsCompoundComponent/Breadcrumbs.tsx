@@ -1,27 +1,5 @@
 import React, { Children, cloneElement, FC, ReactNode } from "react";
-
-interface BreadcrumbItemProps {
-  children: ReactNode;
-  href?: string;
-}
-
-export const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({
-  children,
-  href,
-}) => {
-  const isLink = typeof href !== "undefined";
-  return (
-    <li className="inline-flex items-center">
-      {isLink ? (
-        <a href={href} className="text-blue-500 hover:text-blue-700">
-          {children}
-        </a>
-      ) : (
-        <span className="text-gray-500">{children}</span>
-      )}
-    </li>
-  );
-};
+import BreadcrumbItem, { BreadcrumbItemProps } from "./shared/BreadcrumbItem";
 
 interface BreadcrumbsProps {
   children: ReactNode;

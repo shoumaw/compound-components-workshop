@@ -1,32 +1,29 @@
-import { Children, FC, isValidElement, ReactElement, ReactNode } from "react";
+import {
+  Children,
+  FC,
+  isValidElement,
+  ReactElement,
+  ReactNode,
+  useState,
+} from "react";
 import { useControlled } from "../shared/useControlled";
 import { TabProvider, useTabs } from "../shared/TabContext";
 
 interface TabsProps {
   children: ReactNode;
-  activeTab?: string;
-  onTabChange?: (newTab: string) => string;
+  initialActiveTab?: string;
 }
 
 export const Tabs: FC<TabsProps> = ({
   children,
-  activeTab: activeTabProp,
-  onTabChange: onTabChangeProp,
+  initialActiveTab = "tab-1",
 }) => {
   const tabInfo = getTabInfo(children);
 
-  const [activeTab, onChange] = useControlled({
-    value: activeTabProp,
-    initialValue: "",
-  });
-
-  const onTabChange = (newTab: string) => {
-    onChange?.(newTab);
-    onTabChangeProp?.(newTab);
-  };
+  const [activeTab, onActiveTabChange] = useState(initialActiveTab);
 
   return (
-    <TabProvider activeTab={activeTab} onTabChange={onTabChange}>
+    <TabProvider activeTab={activeTab} onTabChange={onActiveTabChange}>
       <TabList tabInfo={tabInfo} />
       {children}
     </TabProvider>
@@ -56,7 +53,6 @@ const getTabInfo = (
       // if(!child.props || typeof child.props !== 'object' || !('label' in child.props)) {
       //     throw new Error("children of Tabs need a label prop")
       // }
-
       .filter(
         (child): child is ReactElement<TabItemProps> =>
           isValidElement<TabItemProps>(child) && child.type === TabItem

@@ -1,20 +1,30 @@
-import { FC, ReactNode, useState } from "react";
+import { FC, ReactNode } from "react";
 import { TabProvider, useTabs } from "../shared/TabContext";
 import { useControlled } from "../shared/useControlled";
 
 interface TabsProps {
   children: ReactNode;
-  initialActiveTab?: string;
+  activeTab?: string;
+  onTabChange?: (newTab: string) => string;
 }
 
 export const Tabs: FC<TabsProps> = ({
   children,
-  initialActiveTab = "tab-1",
+  activeTab: activeTabProp,
+  onTabChange: onTabChangeProp,
 }) => {
-  const [activeTab, onActiveTabChange] = useState(initialActiveTab);
+  const [activeTab, onChange] = useControlled({
+    value: activeTabProp,
+    initialValue: "",
+  });
+
+  const onTabChange = (newTab: string) => {
+    onChange?.(newTab);
+    onTabChangeProp?.(newTab);
+  };
 
   return (
-    <TabProvider activeTab={activeTab} onTabChange={onActiveTabChange}>
+    <TabProvider activeTab={activeTab} onTabChange={onTabChange}>
       {children}
     </TabProvider>
   );

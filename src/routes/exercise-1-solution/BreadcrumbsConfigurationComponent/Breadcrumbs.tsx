@@ -7,7 +7,7 @@ const Breadcrumbs = ({ items }: { items: BreadcrumbItem[] }) => {
   return (
     <nav className="text-sm">
       <ol className="flex space-x-2">
-        {items.map((item, index) => (
+        {items.map((item) => (
           <BreadcrumbItem href={item.href}>{item.text}</BreadcrumbItem>
         ))}
       </ol>

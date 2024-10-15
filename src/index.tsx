@@ -13,7 +13,8 @@ import Example2ContextAndChildrenCompoundComponentApp from "./routes/example-2/T
 import Exercise1CompoundComponentApp from "./routes/exercise-1-solution/BreadcrumbsCompoundComponent/App";
 import Exercise1ConfigurationComponentApp from "./routes/exercise-1-solution/BreadcrumbsConfigurationComponent/App";
 import Exercise1RenderPropsApp from "./routes/exercise-1-solution/BreadcrumbsWithRenderProps/App";
-import Exercise2CompoundComponentApp from "./routes/exercise-2-solution/AccordionCompoundComponent/App";
+import Exercise2CompoundComponentApp from "./routes/exercise-2-solution/BreadcrumbsCompoundComponent/App";
+import Exercise3CompoundComponentApp from "./routes/exercise-3-solution/AccordionCompoundComponent/App";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "exercise-2-solution-compound-component",
         element: <Exercise2CompoundComponentApp />,
+      },
+      {
+        path: "exercise-3-solution-compound-component",
+        element: <Exercise3CompoundComponentApp />,
       },
     ],
   },

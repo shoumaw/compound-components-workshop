@@ -23,7 +23,7 @@ export default function Root() {
                 to={`/example-1-configuration-component`}
                 className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
               >
-                Example 1: Configuration Component
+                {"Example 1: <Select> Configuration Component"}
               </Link>
             </li>
             <li className="my-1">
@@ -31,7 +31,7 @@ export default function Root() {
                 to={`/example-1-render-props`}
                 className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
               >
-                Example 1: Render Props
+                {"Example 1: <Select> Render Props"}
               </Link>
             </li>
             <li className="my-1">
@@ -39,7 +39,7 @@ export default function Root() {
                 to={`/example-1-compound-component`}
                 className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
               >
-                Example 1: Compound Component
+                {"Example 1: <Select> Compound Component"}
               </Link>
             </li>
             <li className="my-1">
@@ -47,7 +47,7 @@ export default function Root() {
                 to={`/example-2-context-compound-component`}
                 className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
               >
-                Example 2: Context Driven Compound Component
+                {"Example 2: <Tabs> Context Driven Compound Component"}
               </Link>
             </li>
             <li className="my-1">
@@ -55,7 +55,7 @@ export default function Root() {
                 to={`/example-2-context-and-children-compound-component`}
                 className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
               >
-                Example 2: Context And Children Compound Component
+                {"Example 2: <Tabs> Context And Children Compound Component"}
               </Link>
             </li>
           </ul>
@@ -70,7 +70,7 @@ export default function Root() {
                 to={`/exercise-1-configuration-component`}
                 className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
               >
-                Exercise 1: Configuration Component
+                {"Exercise 1: <Breadcrumbs> Configuration Component"}
               </Link>
             </li>
             <li className="my-1">
@@ -78,7 +78,7 @@ export default function Root() {
                 to={`/exercise-1-render-props`}
                 className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
               >
-                Exercise 1: Render Props
+                {"Exercise 1: <Breadcrumbs> Render Props"}
               </Link>
             </li>
             <li className="my-1">
@@ -86,7 +86,7 @@ export default function Root() {
                 to={`/exercise-1-compound-component`}
                 className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
               >
-                Exercise 1: Compound Component
+                {"Exercise 1: <Breadcrumbs> Compound Component"}
               </Link>
             </li>
             <li className="my-1">
@@ -94,7 +94,19 @@ export default function Root() {
                 to={`/exercise-2-solution-compound-component`}
                 className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
               >
-                Exercise 2: Compound Component
+                {
+                  "Exercise 2: <Breadcrumbs> Compound Component using React.Children"
+                }
+              </Link>
+            </li>
+            <li className="my-1">
+              <Link
+                to={`/exercise-3-solution-compound-component`}
+                className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
+              >
+                {
+                  "Exercise 2: <Accordion> Compound Component using Context & React.Children"
+                }
               </Link>
             </li>
           </ul>
