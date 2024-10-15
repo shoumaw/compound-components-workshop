@@ -14,54 +14,6 @@ export default function Root() {
           Workshop Exercises
         </h1>
 
-        {/* Examples Section */}
-        <h2 className="text-lg font-semibold mt-4 mb-2">Examples</h2>
-        <nav className="flex-1 overflow-auto">
-          <ul className="list-none p-0 m-0">
-            <li className="my-1">
-              <Link
-                to={`/example-1-configuration-component`}
-                className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
-              >
-                {"Example 1: <Select> Configuration Component"}
-              </Link>
-            </li>
-            <li className="my-1">
-              <Link
-                to={`/example-1-render-props`}
-                className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
-              >
-                {"Example 1: <Select> Render Props"}
-              </Link>
-            </li>
-            <li className="my-1">
-              <Link
-                to={`/example-1-compound-component`}
-                className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
-              >
-                {"Example 1: <Select> Compound Component"}
-              </Link>
-            </li>
-            <li className="my-1">
-              <Link
-                to={`/example-2-context-compound-component`}
-                className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
-              >
-                {"Example 2: <Tabs> Context Driven Compound Component"}
-              </Link>
-            </li>
-            <li className="my-1">
-              <Link
-                to={`/example-2-context-and-children-compound-component`}
-                className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
-              >
-                {"Example 2: <Tabs> Context And Children Compound Component"}
-              </Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* Exercises Section */}
         <h2 className="text-lg font-semibold mt-4 mb-2">Exercises</h2>
         <nav className="flex-1 overflow-auto">
           <ul className="list-none p-0 m-0">
