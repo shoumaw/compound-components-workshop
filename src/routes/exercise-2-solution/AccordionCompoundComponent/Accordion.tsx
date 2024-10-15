@@ -9,11 +9,12 @@ import {
 } from "react";
 import { AccordionPanel, AccordionPanelProps } from "./AccordionPanel";
 import { className } from "../../../utils/className/className";
-import React from "react";
 
 export interface AccordionProps {
   alwaysOpen?: boolean;
-  children: ReactNode;
+  children:
+    | ReactElement<AccordionPanelProps>
+    | Array<ReactElement<AccordionPanelProps>>;
   collapseAll?: boolean;
 }
 const Accordion: FC<AccordionProps> = ({
@@ -25,10 +26,7 @@ const Accordion: FC<AccordionProps> = ({
   const panels = useMemo(
     () =>
       Children.map(children, (child, i) => {
-        if (
-          React.isValidElement<AccordionPanelProps>(child) &&
-          child.type === AccordionPanel
-        ) {
+        if (child.type === AccordionPanel) {
           return cloneElement(child, {
             alwaysOpen,
             isOpen: isOpen === i,

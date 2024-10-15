@@ -40,32 +40,29 @@ const getTabInfo = (
     Children.toArray(children)
       // We are going to be aggregating props
       // all invalid elements need to go
-      .filter(isValidElement)
+
+      /**
+       * You could check for labels in a couple ways
+       *  1. run time type enforcement
+       *  2. just verifying the label exists on the prop
+       */
+
+      // 1.
+      // if(child.type !== TabItem) {
+      //     throw new Error("Only TabItem can be children of Tabs")
+      // }
+
+      // // 2.
+      // if(!child.props || typeof child.props !== 'object' || !('label' in child.props)) {
+      //     throw new Error("children of Tabs need a label prop")
+      // }
+
+      .filter(
+        (child): child is ReactElement<TabItemProps> =>
+          isValidElement<TabItemProps>(child) && child.type === TabItem
+      )
       .map((child) => {
-        /**
-         * You could check for labels in a couple ways
-         *  1. run time type enforcement
-         *  2. just verifying the label exists on the prop
-         */
-
-        // 1.
-        // if(child.type !== TabItem) {
-        //     throw new Error("Only TabItem can be children of Tabs")
-        // }
-
-        // // 2.
-        // if(!child.props || typeof child.props !== 'object' || !('label' in child.props)) {
-        //     throw new Error("children of Tabs need a label prop")
-        // }
-
-        if (child.type !== TabItem) {
-          throw new Error("Only TabItem can be children of Tabs");
-        }
-
-        // we're too low level for TS to work without a cast
-        const tabItem = child as ReactElement<TabItemProps>;
-
-        return { value: tabItem.props.value, label: tabItem.props.label };
+        return { value: child.props.value, label: child.props.label };
       })
   );
 };
