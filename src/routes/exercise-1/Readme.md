@@ -10,7 +10,24 @@ In this exercise, you will implement a stateless `Breadcrumbs` component in Reac
 
 For each pattern, you are provided with:
 
-- The `App.tsx` component that uses the `Breadcrumbs` component.
-- Empty `Breadcrumbs.tsx` and `BreadcrumbItem.tsx` files that you need to implement from scratch.
+- The `BreadcrumbItem.tsx` component
+- Empty `Breadcrumbs.tsx` and `App.tsx` files that you need to implement.
 
-Your task is to fill in the `Breadcrumbs.tsx` and `BreadcrumbItem.tsx` components according to each pattern and use the `Breadcrumbs/BreadcrumbItem` components as needed in the `App.tsx`
+Your task is to fill in the `Breadcrumbs.tsx` and `App.tsx` components according to each pattern.
+
+### 1. Compound Component Pattern
+
+#### Tasks:
+- Implement `Breadcrumbs.tsx` with a parent component that renders its children.
+
+### 2. Configuration Component Pattern
+
+#### Tasks:
+- Implement `Breadcrumbs.tsx` that takes an items prop, which is an array of breadcrumb items.
+
+
+### 3. Render Props Pattern
+
+#### Tasks:
+- Implement `Breadcrumbs.tsx` that accepts an items prop and a renderItem function.
+- The renderItem function will be used to render each breadcrumb item.
