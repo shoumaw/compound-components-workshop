@@ -91,7 +91,7 @@ export default function Root() {
             </li>
             <li className="my-1">
               <Link
-                to={`/exercise-2-solution-compound-component`}
+                to={`/exercise-2-compound-component`}
                 className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
               >
                 {
@@ -101,7 +101,7 @@ export default function Root() {
             </li>
             <li className="my-1">
               <Link
-                to={`/exercise-3-solution-compound-component`}
+                to={`/exercise-3-compound-component`}
                 className="flex items-center justify-between whitespace-pre py-2.5 px-2 rounded-lg text-inherit no-underline gap-4 hover:bg-gray-300"
               >
                 {
