@@ -6,7 +6,6 @@ import {
   ReactNode,
   useState,
 } from "react";
-import { useControlled } from "../shared/useControlled";
 import { TabProvider, useTabs } from "../shared/TabContext";
 
 interface TabsProps {
