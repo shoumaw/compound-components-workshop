@@ -2,7 +2,7 @@ const App = () => {
   const breadcrumbItems = [
     { text: "Home", href: "/" },
     { text: "Library", href: "/library" },
-    { text: "Data", href: "/library/data" },
+    { text: "Data" },
   ];
 
   return (

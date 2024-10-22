@@ -50,8 +50,3 @@
 - Concise
 - Content for a tab as a consolidated in one component
 
-## On Controlling Tabs
-
-- Navigation and Tabs are often closely related
-  - If you prefer programmatic Navigation `ContextAndChildren` is easier
-  - If you want to use `Link` `ContextDriven` is easier via an `as` or `component` prop

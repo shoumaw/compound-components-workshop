@@ -15,3 +15,4 @@ function SelectGeneric<TData extends object>({
     </select>
   );
 }
+export default SelectGeneric;
