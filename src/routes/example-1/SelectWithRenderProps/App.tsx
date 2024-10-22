@@ -12,9 +12,7 @@ const App: React.FC = () => {
           { value: "2", label: "Option 2" },
         ]}
         renderOption={(option) => (
-          <>
-            <Option value={option.value}>{option.label}</Option>
-          </>
+          <Option value={option.value}>{option.label}</Option>
         )}
       />
     </div>
