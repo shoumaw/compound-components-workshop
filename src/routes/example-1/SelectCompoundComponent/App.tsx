@@ -1,7 +1,6 @@
 import React from "react";
 import Select from "./Select";
-//As a side note, a lot of UI libraries use . for their compound component API
-//This approach is strictly optional and you can write your component however you prefer. It doesn’t affect the end result in any significant way.
+
 const App: React.FC = () => {
   return (
     <div className="flex flex-col gap-y-4 font-bold">

@@ -1,6 +1,5 @@
 import { FC, ReactNode, useState } from "react";
 import { TabProvider, useTabs } from "../shared/TabContext";
-import { useControlled } from "../shared/useControlled";
 
 interface TabsProps {
   children: ReactNode;

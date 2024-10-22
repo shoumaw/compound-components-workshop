@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 
-interface SelectGenericProps<T extends object | string> {
-  id: keyof T;
+interface SelectGenericProps<T extends object> {
   options: T[];
   renderOption: (option: T) => JSX.Element;
 }
@@ -9,12 +8,11 @@ interface SelectGenericProps<T extends object | string> {
 function SelectGeneric<TData extends object>({
   options,
   renderOption,
-  id,
 }: SelectGenericProps<TData>) {
   return (
     <select>
       {options.map((option) => (
-        <Fragment key={option[id]?.toString()}>{renderOption(option)}</Fragment>
+        <Fragment>{renderOption(option)}</Fragment>
       ))}
     </select>
   );

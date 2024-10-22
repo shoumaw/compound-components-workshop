@@ -11,7 +11,7 @@ In this exercise, you will implement a stateless `Breadcrumbs` component in Reac
 For each pattern, you are provided with:
 
 - The `BreadcrumbItem.tsx` component
-- Empty `Breadcrumbs.tsx` and `App.tsx` files that you need to implement.
+- Empty `Breadcrumbs.tsx` and partially empty `App.tsx` files that you need to implement.
 
 Your task is to fill in the `Breadcrumbs.tsx` and `App.tsx` components according to each pattern.
 
