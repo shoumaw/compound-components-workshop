@@ -20,7 +20,6 @@
 ### Notes
 
 - Easy to implement
-- Looks very similar to how the `Tabs` render
 - Incredibly flexible on what you can render inside of the tab
 - Annoying that you have to keep `value` in sync across `Tab` and `TabPanel`
 - Pretty verbose

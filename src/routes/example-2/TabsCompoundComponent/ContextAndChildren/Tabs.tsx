@@ -32,34 +32,14 @@ export const Tabs: FC<TabsProps> = ({
 const getTabInfo = (
   children: ReactNode
 ): { value: string; label: ReactNode }[] => {
-  return (
-    Children.toArray(children)
-      // We are going to be aggregating props
-      // all invalid elements need to go
-
-      /**
-       * You could check for labels in a couple ways
-       *  1. run time type enforcement
-       *  2. just verifying the label exists on the prop
-       */
-
-      // 1.
-      // if(child.type !== TabItem) {
-      //     throw new Error("Only TabItem can be children of Tabs")
-      // }
-
-      // // 2.
-      // if(!child.props || typeof child.props !== 'object' || !('label' in child.props)) {
-      //     throw new Error("children of Tabs need a label prop")
-      // }
-      .filter(
-        (child): child is ReactElement<TabItemProps> =>
-          isValidElement<TabItemProps>(child) && child.type === TabItem
-      )
-      .map((child) => {
-        return { value: child.props.value, label: child.props.label };
-      })
-  );
+  return Children.toArray(children)
+    .filter(
+      (child): child is ReactElement<TabItemProps> =>
+        isValidElement<TabItemProps>(child) && child.type === TabItem
+    )
+    .map((child) => {
+      return { value: child.props.value, label: child.props.label };
+    });
 };
 
 interface TabListProps {

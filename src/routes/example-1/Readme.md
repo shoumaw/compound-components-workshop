@@ -37,7 +37,7 @@
 
 - Flexible rendering: You can control how each option is rendered, allowing for custom structures and components.
 - Customizable: Easily apply additional styles or complex markup to individual options.
-- Slightly more complex: The renderOption prop introduces some complexity compared to the configuration approach but is more powerful.
+- Slightly more complex: The renderOption prop introduces some complexity compared to the configuration approach.
 - Better for dynamic options: If you need to apply specific behaviors or conditional logic for rendering options, this pattern is ideal.
 
 ## Compound Component
@@ -52,7 +52,6 @@
 ### Notes
 
 - Modular and flexible: This allows options to be directly written inside the Select, making it easy to control how each one looks.
-- Encapsulated: The structure for each option is consolidated, making it more intuitive to manage without passing data as props.
 - Clear structure: Easy to see which options are part of the Select just by looking at the JSX structure.
 - Potentially verbose: This approach could get long-winded if there are many options, but it provides the most control over rendering.
 
