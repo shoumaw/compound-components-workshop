@@ -2,14 +2,14 @@ import { ReactNode, FC, ReactElement } from "react";
 import { AccordionPanelProps } from "./AccordionPanel";
 
 export interface AccordionProps {
-  alwaysOpen?: boolean;
+  multipleOpen?: boolean;
   children:
     | ReactElement<AccordionPanelProps>
     | Array<ReactElement<AccordionPanelProps>>;
   collapseAll?: boolean;
 }
 const Accordion: FC<AccordionProps> = ({
-  alwaysOpen = false,
+  multipleOpen = false,
   collapseAll = false,
   children,
 }) => {

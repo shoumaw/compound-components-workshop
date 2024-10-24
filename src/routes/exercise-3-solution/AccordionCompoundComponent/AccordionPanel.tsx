@@ -12,10 +12,10 @@ export const AccordionPanel: FC<AccordionPanelProps> = ({
   children,
   ...props
 }) => {
-  const { alwaysOpen } = props;
+  const { multipleOpen } = props;
   const [isOpen, setOpen] = useState(props.isOpen);
 
-  const value = alwaysOpen
+  const value = multipleOpen
     ? {
         ...props,
         isOpen,

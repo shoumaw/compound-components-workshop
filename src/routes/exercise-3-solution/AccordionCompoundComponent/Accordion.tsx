@@ -11,14 +11,14 @@ import { AccordionPanel, AccordionPanelProps } from "./AccordionPanel";
 import { className } from "../../../utils/className/className";
 
 export interface AccordionProps {
-  alwaysOpen?: boolean;
+  multipleOpen?: boolean;
   children:
     | ReactElement<AccordionPanelProps>
     | Array<ReactElement<AccordionPanelProps>>;
   collapseAll?: boolean;
 }
 const Accordion: FC<AccordionProps> = ({
-  alwaysOpen = false,
+  multipleOpen = false,
   collapseAll = false,
   children,
 }) => {
@@ -28,13 +28,13 @@ const Accordion: FC<AccordionProps> = ({
       Children.map(children, (child, i) => {
         if (child.type === AccordionPanel) {
           return cloneElement(child, {
-            alwaysOpen,
+            multipleOpen,
             isOpen: isOpen === i,
             setOpen: () => setOpen(isOpen === i ? -1 : i),
           });
         }
       }),
-    [alwaysOpen, children, isOpen]
+    [multipleOpen, children, isOpen]
   );
 
   return (
